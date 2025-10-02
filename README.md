@@ -60,3 +60,190 @@ Since GDI+ was developed in C++ and is not yet integrated into Delphi (Win32), w
 ### gdiplus.dll:
 The original [gdiplus.dll](https://www.dll-files.com/gdiplus.dll.html) file belongs to Microsoft Windows software from Microsoft.
 Microsoft Windows is an operating system; a piece of software that acts as a bridge between a computer's hardware and software. [Gdiplus.dll](https://www.dll-files.com/gdiplus.dll.html) is a resource library belonging to Windows GDI+, an advanced programming interface that interacts with device drivers on behalf of Windows applications. It is a critical Windows component that should not be disabled or removed.
+
+### Available GDi options:
+The GDiApi.pas file contains additional options that can be integrated into this program to paint advanced graphics.
+
+```pascal
+  TMetafileFrameUnit = MetafileFrameUnit;
+{$ENDIF}
+//--------------------------------------------------------------------------
+// Coordinate space identifiers
+//--------------------------------------------------------------------------
+
+  {$EXTERNALSYM CoordinateSpace}
+  CoordinateSpace = (
+    CoordinateSpaceWorld,     // 0
+    CoordinateSpacePage,      // 1
+    CoordinateSpaceDevice     // 2
+  );
+  TCoordinateSpace = CoordinateSpace;
+
+//--------------------------------------------------------------------------
+// Various wrap modes for brushes
+//--------------------------------------------------------------------------
+
+  {$EXTERNALSYM WrapMode}
+  WrapMode = (
+    WrapModeTile,        // 0
+    WrapModeTileFlipX,   // 1
+    WrapModeTileFlipY,   // 2
+    WrapModeTileFlipXY,  // 3
+    WrapModeClamp        // 4
+  );
+  TWrapMode = WrapMode;
+
+//--------------------------------------------------------------------------
+// Various hatch styles
+//--------------------------------------------------------------------------
+
+  {$EXTERNALSYM HatchStyle}
+  HatchStyle = (
+    HatchStyleHorizontal,                  // = 0,
+    HatchStyleVertical,                    // = 1,
+    HatchStyleForwardDiagonal,             // = 2,
+    HatchStyleBackwardDiagonal,            // = 3,
+    HatchStyleCross,                       // = 4,
+    HatchStyleDiagonalCross,               // = 5,
+    HatchStyle05Percent,                   // = 6,
+    HatchStyle10Percent,                   // = 7,
+    HatchStyle20Percent,                   // = 8,
+    HatchStyle25Percent,                   // = 9,
+    HatchStyle30Percent,                   // = 10,
+    HatchStyle40Percent,                   // = 11,
+    HatchStyle50Percent,                   // = 12,
+    HatchStyle60Percent,                   // = 13,
+    HatchStyle70Percent,                   // = 14,
+    HatchStyle75Percent,                   // = 15,
+    HatchStyle80Percent,                   // = 16,
+    HatchStyle90Percent,                   // = 17,
+    HatchStyleLightDownwardDiagonal,       // = 18,
+    HatchStyleLightUpwardDiagonal,         // = 19,
+    HatchStyleDarkDownwardDiagonal,        // = 20,
+    HatchStyleDarkUpwardDiagonal,          // = 21,
+    HatchStyleWideDownwardDiagonal,        // = 22,
+    HatchStyleWideUpwardDiagonal,          // = 23,
+    HatchStyleLightVertical,               // = 24,
+    HatchStyleLightHorizontal,             // = 25,
+    HatchStyleNarrowVertical,              // = 26,
+    HatchStyleNarrowHorizontal,            // = 27,
+    HatchStyleDarkVertical,                // = 28,
+    HatchStyleDarkHorizontal,              // = 29,
+    HatchStyleDashedDownwardDiagonal,      // = 30,
+    HatchStyleDashedUpwardDiagonal,        // = 31,
+    HatchStyleDashedHorizontal,            // = 32,
+    HatchStyleDashedVertical,              // = 33,
+    HatchStyleSmallConfetti,               // = 34,
+    HatchStyleLargeConfetti,               // = 35,
+    HatchStyleZigZag,                      // = 36,
+    HatchStyleWave,                        // = 37,
+    HatchStyleDiagonalBrick,               // = 38,
+    HatchStyleHorizontalBrick,             // = 39,
+    HatchStyleWeave,                       // = 40,
+    HatchStylePlaid,                       // = 41,
+    HatchStyleDivot,                       // = 42,
+    HatchStyleDottedGrid,                  // = 43,
+    HatchStyleDottedDiamond,               // = 44,
+    HatchStyleShingle,                     // = 45,
+    HatchStyleTrellis,                     // = 46,
+    HatchStyleSphere,                      // = 47,
+    HatchStyleSmallGrid,                   // = 48,
+    HatchStyleSmallCheckerBoard,           // = 49,
+    HatchStyleLargeCheckerBoard,           // = 50,
+    HatchStyleOutlinedDiamond,             // = 51,
+    HatchStyleSolidDiamond,                // = 52,
+
+    HatchStyleTotal                        // = 53,
+  );
+
+  const
+    HatchStyleLargeGrid = HatchStyleCross; // 4
+    HatchStyleMin       = HatchStyleHorizontal;
+    HatchStyleMax       = HatchStyleSolidDiamond;
+
+type
+  THatchStyle = HatchStyle;
+
+//--------------------------------------------------------------------------
+// Dash style constants
+//--------------------------------------------------------------------------
+
+  {$EXTERNALSYM DashStyle}
+  DashStyle = (
+    DashStyleSolid,          // 0
+    DashStyleDash,           // 1
+    DashStyleDot,            // 2
+    DashStyleDashDot,        // 3
+    DashStyleDashDotDot,     // 4
+    DashStyleCustom          // 5
+  );
+  TDashStyle = DashStyle;
+
+//--------------------------------------------------------------------------
+// Dash cap constants
+//--------------------------------------------------------------------------
+{$IFDEF DELPHI6_UP}
+  {$EXTERNALSYM DashCap}
+  DashCap = (
+    DashCapFlat             = 0,
+    DashCapRound            = 2,
+    DashCapTriangle         = 3
+  );
+  TDashCap = DashCap;
+{$ELSE}
+  {$EXTERNALSYM DashCap}
+  DashCap = Integer;
+  const
+    DashCapFlat             = 0;
+    DashCapRound            = 2;
+    DashCapTriangle         = 3;
+
+type
+  TDashCap = DashCap;
+{$ENDIF}
+
+//--------------------------------------------------------------------------
+// Line cap constants (only the lowest 8 bits are used).
+//--------------------------------------------------------------------------
+{$IFDEF DELPHI6_UP}
+  {$EXTERNALSYM LineCap}
+  LineCap = (
+    LineCapFlat             = 0,
+    LineCapSquare           = 1,
+    LineCapRound            = 2,
+    LineCapTriangle         = 3,
+
+    LineCapNoAnchor         = $10, // corresponds to flat cap
+    LineCapSquareAnchor     = $11, // corresponds to square cap
+    LineCapRoundAnchor      = $12, // corresponds to round cap
+    LineCapDiamondAnchor    = $13, // corresponds to triangle cap
+    LineCapArrowAnchor      = $14, // no correspondence
+
+    LineCapCustom           = $ff, // custom cap
+
+    LineCapAnchorMask       = $f0  // mask to check for anchor or not.
+  );
+  TLineCap = LineCap;
+{$ELSE}
+  {$EXTERNALSYM LineCap}
+  LineCap = Integer;
+  const
+    LineCapFlat             = 0;
+    LineCapSquare           = 1;
+    LineCapRound            = 2;
+    LineCapTriangle         = 3;
+
+    LineCapNoAnchor         = $10; // corresponds to flat cap
+    LineCapSquareAnchor     = $11; // corresponds to square cap
+    LineCapRoundAnchor      = $12; // corresponds to round cap
+    LineCapDiamondAnchor    = $13; // corresponds to triangle cap
+    LineCapArrowAnchor      = $14; // no correspondence
+
+    LineCapCustom           = $ff; // custom cap
+
+    LineCapAnchorMask       = $f0; // mask to check for anchor or not.
+
+type
+  TLineCap = LineCap;
+{$ENDIF}
+```
