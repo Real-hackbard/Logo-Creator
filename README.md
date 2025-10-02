@@ -42,3 +42,17 @@ The primary strength of TrueType was originally that it offered [font](https://e
 * Define Meta Information Art
 * Set Individual Export GIF Methods
 
+### Microsoft GDI:
+Every programmer should be familiar with the term GDI ([Graphics Device Interface](https://en.wikipedia.org/wiki/Graphics_Device_Interface)). This interface is responsible for ensuring that a program is visible at all. However, the Windows "standard GDI" was beginning to show its age, so GDI+ came into being. The [GDI+ library](https://learn.microsoft.com/en-us/windows/win32/gdiplus/-gdiplus-gdi-start) has been part of the inventory since Windows XP. Since Vista, programs that still use the older GDI have been redirected directly to the Desktop Window Manager.
+
+### New features include:
+* Native JPEG and PNG rendering
+* Improved path management (for vector graphics)
+* Colors in ARGB (alpha, red, green, blue)
+* Simple antialiasing
+* Easy transformation and rotation of graphics
+* Simple clipping
+* Completely OOP
+
+The GDI+ library (gdiplus.dll) has been included by default since Windows XP. However, it is also backward compatible with older versions of Windows. Therefore, it is recommended to include the DLL in the application path.
+Since GDI+ was developed in C++ and is not yet integrated into Delphi (Win32), we require a translation of the GDI+ header files. A free GDI+ translation for Delphi is available for download at www.progdigy.com. Installation should not be difficult, so it will not be explained here. The package from progdigy.com is also available for download directly from our server.
