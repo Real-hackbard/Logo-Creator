@@ -247,3 +247,7 @@ type
   TLineCap = LineCap;
 {$ENDIF}
 ```
+
+</br>
+
+Ich wünsche euch viel Spaß mit diesem Projekt.
