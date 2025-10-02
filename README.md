@@ -26,7 +26,7 @@ The primary strength of TrueType was originally that it offered [font](https://e
 </br>
 
 ### Features:
-* Load *.ttf Files in C:\Windows\Fonts\
+* Load *.ttf Files in  ```C:\Windows\Fonts\```
 * Adjust Font/Border Size
 * Adjust X/Y Dimension
 * Define RGB Font/Border Colors
