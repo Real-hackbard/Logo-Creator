@@ -13,3 +13,4 @@ License     : Freeware
 </br>
 
 
+This is an example of how to use ```GdiApi.pas``` to program a compact but effective logo creator that creates logos from the installed Windows [TrueType (TTF)](https://en.wikipedia.org/wiki/TrueType) font set.
