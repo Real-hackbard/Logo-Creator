@@ -250,4 +250,4 @@ type
 
 </br>
 
-Ich wünsche euch viel Spaß mit diesem Projekt.
+I hope you have fun with this project.
