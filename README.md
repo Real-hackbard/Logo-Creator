@@ -44,6 +44,20 @@ A logo is a graphic symbol (signet) that represents a specific entity, which can
 * Define Meta Information Art
 * Set Individual Export GIF Methods
 
+### Where can I get TTF files?
+* https://www.fontspace.com/category/ttf
+* http://www.myfont.de/fonts/alphabet/ttf-fonts-S.html
+* https://fontdrop.info/#/?darkmode=true
+* https://font.download/search/Ttf
+* https://www.fontsquirrel.com/fonts/list/popular
+* https://www.1001freefonts.com/
+* https://www.dafont.com/ttf.d592
+* Editors:
+    * https://www.glyphrstudio.com/
+    * https://fontforge.org/en-US/
+    * https://www.birdfont.org/
+    * https://www.calligraphr.com/de/ 
+
 ### Microsoft GDI:
 Every programmer should be familiar with the term GDI ([Graphics Device Interface](https://en.wikipedia.org/wiki/Graphics_Device_Interface)). This interface is responsible for ensuring that a program is visible at all. However, the Windows "standard GDI" was beginning to show its age, so GDI+ came into being. The [GDI+ library](https://learn.microsoft.com/en-us/windows/win32/gdiplus/-gdiplus-gdi-start) has been part of the inventory since Windows XP. Since Vista, programs that still use the older GDI have been redirected directly to the Desktop Window Manager.
 
