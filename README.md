@@ -58,7 +58,7 @@ A logo is a graphic symbol (signet) that represents a specific entity, which can
     * https://www.birdfont.org/
     * https://www.calligraphr.com/de/ 
 
-Here is my selection of graffiti fonts that I use : https://mega.nz/file/cKoXVArR#GmV-Nay9MJXqcPBiyd-mlsOMZI1E9Z-CwyoBrSZ7tUI
+Here is my selection of Graffiti fonts that I use : https://mega.nz/file/cKoXVArR#GmV-Nay9MJXqcPBiyd-mlsOMZI1E9Z-CwyoBrSZ7tUI
 
 ### Microsoft GDI:
 Every programmer should be familiar with the term GDI ([Graphics Device Interface](https://en.wikipedia.org/wiki/Graphics_Device_Interface)). This interface is responsible for ensuring that a program is visible at all. However, the Windows "standard GDI" was beginning to show its age, so GDI+ came into being. The [GDI+ library](https://learn.microsoft.com/en-us/windows/win32/gdiplus/-gdiplus-gdi-start) has been part of the inventory since Windows XP. Since Vista, programs that still use the older GDI have been redirected directly to the Desktop Window Manager.
