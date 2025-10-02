@@ -54,5 +54,9 @@ Every programmer should be familiar with the term GDI ([Graphics Device Interfac
 * Simple clipping
 * Completely OOP
 
-The GDI+ library (gdiplus.dll) has been included by default since Windows XP. However, it is also backward compatible with older versions of Windows. Therefore, it is recommended to include the DLL in the application path.
+The GDI+ library ([gdiplus.dll](https://www.dll-files.com/gdiplus.dll.html)) has been included by default since Windows XP. However, it is also backward compatible with older versions of Windows. Therefore, it is recommended to include the DLL in the application path.
 Since GDI+ was developed in C++ and is not yet integrated into Delphi (Win32), we require a translation of the GDI+ header files. A free GDI+ translation for Delphi is available for download at www.progdigy.com. Installation should not be difficult, so it will not be explained here. The package from progdigy.com is also available for download directly from our server.
+
+### gdiplus.dll:
+The original [gdiplus.dll](https://www.dll-files.com/gdiplus.dll.html) file belongs to Microsoft Windows software from Microsoft.
+Microsoft Windows is an operating system; a piece of software that acts as a bridge between a computer's hardware and software. [Gdiplus.dll](https://www.dll-files.com/gdiplus.dll.html) is a resource library belonging to Windows GDI+, an advanced programming interface that interacts with device drivers on behalf of Windows applications. It is a critical Windows component that should not be disabled or removed.
