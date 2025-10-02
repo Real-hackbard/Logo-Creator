@@ -25,6 +25,8 @@ The primary strength of TrueType was originally that it offered [font](https://e
 
 </br>
 
+A logo is a graphic symbol (signet) that represents a specific entity, which can be a company, an organization, a private individual, or a product. It can be designed as a pure figurative mark, a word mark, or a combination of word and figurative marks and is an essential component of the visual appearance (corporate design) and the bearer of the identity (corporate identity) of the rights holder.
+
 ### Features:
 * Load *.ttf Files in  ```C:\Windows\Fonts\```
 * Adjust Font/Border Size
